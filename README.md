@@ -1,5 +1,5 @@
 Stick It To Em'
 
 Group Members:
-Saisrihitha Yadlapalli
+Saisrihitha Yadlapalli,
 Varshitha Uppula
