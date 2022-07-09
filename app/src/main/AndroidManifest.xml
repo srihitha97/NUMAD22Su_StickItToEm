@@ -16,5 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NUMAD22Su_StickItToEm"
         tools:targetApi="31">
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".RegistrationActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
     </application>
+
 </manifest>
