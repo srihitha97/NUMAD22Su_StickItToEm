@@ -17,13 +17,17 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrationActivity extends AppCompatActivity {
 
     private EditText emailTextView, passwordTextView;
     private Button Btn;
     private ProgressBar progressbar;
-    private FirebaseAuth mAuth;
+//    private FirebaseAuth mAuth;
+    private FirebaseDatabase db;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -32,7 +36,9 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.registration_activity);
 
         // taking FirebaseAuth instance
-        mAuth = FirebaseAuth.getInstance();
+//        mAuth = FirebaseAuth.getInstance();
+
+
 
         // initialising all views through id defined above
         emailTextView = findViewById(R.id.email);
@@ -76,45 +82,68 @@ public class RegistrationActivity extends AppCompatActivity {
                     .show();
             return;
         }
+        if(!email.isEmpty() && !password.isEmpty()){
+//            Users users= new Users(password,email);
+//            db= FirebaseDatabase.getInstance();
+//            reference= db.getReference("Users");
+//            reference.child(email).setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
+//                @Override
+//                public void onComplete(@NonNull Task<Void> task) {
+//                    emailTextView.setText("");
+//                    passwordTextView.setText("");
+//                    Toast.makeText(getApplicationContext(),
+//                                    "Success",
+//                                    Toast.LENGTH_LONG)
+//                            .show();
+//
+//                }
+//            });
+            Users users= new Users(password,email);
+            db= FirebaseDatabase.getInstance();
+            reference= db.getReference("Users");
+
+            reference.child(email).setValue(users);
+
+
+        }
 
         // create new user or register new user
-        mAuth
-                .createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task)
-                    {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(),
-                                            "Registration successful!",
-                                            Toast.LENGTH_LONG)
-                                    .show();
-
-                            // hide the progress bar
-                            progressbar.setVisibility(View.GONE);
-
-                            // if the user created intent to login activity
-                            Intent intent
-                                    = new Intent(RegistrationActivity.this,
-                                    MainActivity.class);
-                            startActivity(intent);
-                        }
-                        else {
-
-                            // Registration failed
-                            Toast.makeText(
-                                            getApplicationContext(),
-                                            "Registration failed!!"
-                                                    + " Please try again later",
-                                            Toast.LENGTH_LONG)
-                                    .show();
-
-                            // hide the progress bar
-                            progressbar.setVisibility(View.GONE);
-                        }
-                    }
-                });
+//        mAuth
+//                .createUserWithEmailAndPassword(email, password)
+//                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task)
+//                    {
+//                        if (task.isSuccessful()) {
+//                            Toast.makeText(getApplicationContext(),
+//                                            "Registration successful!",
+//                                            Toast.LENGTH_LONG)
+//                                    .show();
+//
+//                            // hide the progress bar
+//                            progressbar.setVisibility(View.GONE);
+//
+//                            // if the user created intent to login activity
+//                            Intent intent
+//                                    = new Intent(RegistrationActivity.this,
+//                                    MainActivity.class);
+//                            startActivity(intent);
+//                        }
+//                        else {
+//
+//                            // Registration failed
+//                            Toast.makeText(
+//                                            getApplicationContext(),
+//                                            "Registration failed!!"
+//                                                    + " Please try again later",
+//                                            Toast.LENGTH_LONG)
+//                                    .show();
+//
+//                            // hide the progress bar
+//                            progressbar.setVisibility(View.GONE);
+//                        }
+//                    }
+//                });
     }
 }
-
