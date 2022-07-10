@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Stickers</string>
+    <string name="sticker_1">Sticker 1</string>
+    <string name="sticker_2">Sticker 2</string>
+    <string name="sticker_3">Sticker 3</string>
+    <string name="sticker_4">Sticker 4</string>
+    <string name="sticker_5">Sticker 5</string>
+    <string name="sticker_6">Sticker 6</string>
+
 
 
 </resources>
