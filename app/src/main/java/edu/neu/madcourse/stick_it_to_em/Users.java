@@ -1,30 +1,21 @@
 package edu.neu.madcourse.stick_it_to_em;
 
 public class Users {
-    String email, password;
+    String user;
 
     public Users() {
     }
 
-    public Users(String email, String password) {
-        this.email = email;
-        this.password = password;
+    public Users(String user) {
+        this.user = user;
     }
 
 
-    public String getEmail() {
-        return email;
+    public String getUser() {
+        return user;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUser(String user) {
+        this.user = user;
     }
 }
