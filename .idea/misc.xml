@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Varshitha uppula/StudioProjects/NUMAD22Su_StickItToEm/app/src/main/res/drawable/custom_image_button.xml" value="0.1785" />
+        <entry key="..\:/Users/Varshitha uppula/StudioProjects/NUMAD22Su_StickItToEm/app/src/main/res/layout/activity_login_home.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Varshitha uppula/StudioProjects/NUMAD22Su_StickItToEm/app/src/main/res/layout/activity_stickers.xml" value="0.1" />
+        <entry key="..\:/Users/Varshitha uppula/StudioProjects/NUMAD22Su_StickItToEm/app/src/main/res/layout/login_activity.xml" value="0.1" />
+        <entry key="..\:/Users/Varshitha uppula/StudioProjects/NUMAD22Su_StickItToEm/app/src/main/res/layout/login_home.xml" value="0.1" />
+        <entry key="..\:/Users/Varshitha uppula/StudioProjects/NUMAD22Su_StickItToEm/app/src/main/res/layout/registration_activity.xml" value="0.12273550724637682" />
         <entry key="..\:/Users/saisr/AndroidStudioProjects/NUMAD22Su_StickItToEm/app/src/main/res/drawable/ic_launcher_sy_background.xml" value="0.131" />
-        <entry key="..\:/Users/saisr/AndroidStudioProjects/NUMAD22Su_StickItToEm/app/src/main/res/layout/login_activity.xml" value="0.1" />
-        <entry key="..\:/Users/saisr/AndroidStudioProjects/NUMAD22Su_StickItToEm/app/src/main/res/layout/main_activity.xml" value="0.1" />
-        <entry key="..\:/Users/saisr/AndroidStudioProjects/NUMAD22Su_StickItToEm/app/src/main/res/layout/registeration_activity.xml" value="0.1" />
         <entry key="..\:/Users/saisr/Desktop/NUMAD21Su_LLD-WorkingVersion/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1785" />
       </map>
     </option>

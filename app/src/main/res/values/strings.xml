@@ -6,7 +6,8 @@
     <string name="sticker_4">Sticker 4</string>
     <string name="sticker_5">Sticker 5</string>
     <string name="sticker_6">Sticker 6</string>
-
+    <string name="chat_screen_indication">See chat history or send a new sticker</string>
+    <string name="all_stickers">See All Stickers</string>
 
 
 </resources>

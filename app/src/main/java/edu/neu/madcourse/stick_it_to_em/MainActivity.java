@@ -6,9 +6,6 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 public class MainActivity extends AppCompatActivity {
 
 
@@ -23,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()){
 
             case R.id.register:
-                Intent intent0 = new Intent(this, RegistrationActivity.class);
+                Intent intent0 = new Intent(this, LoginHome.class);
                 startActivity(intent0);
                 break;
 
