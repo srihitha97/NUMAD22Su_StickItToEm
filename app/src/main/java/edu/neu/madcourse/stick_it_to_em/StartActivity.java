@@ -36,8 +36,8 @@ public class StartActivity extends AppCompatActivity implements
         DatabaseReference dr = FirebaseDatabase.getInstance().getReference();
         DatabaseReference udr = dr.child("users");
         udr.child(name).setValue(inf);
-        text.append("Hello " + name + "!");
-        text.append("Send a sticker to other users. Click on user row to see sticker exchange history between you and the other user");
+        text.append("Hello " + name + ". " + "\n"+"\n");
+        text.append("Send stickers to other users and click on user row to see sticker exchange history between you and the other user");
         RecyclerView all = findViewById(R.id.chats);
         RecyclerView.LayoutManager layout = new LinearLayoutManager(this);
         all.setLayoutManager(layout);

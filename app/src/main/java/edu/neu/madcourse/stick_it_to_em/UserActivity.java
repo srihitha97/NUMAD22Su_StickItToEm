@@ -1,5 +1,4 @@
 package edu.neu.madcourse.stick_it_to_em;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

@@ -6,9 +6,6 @@ public class ChatActivity
     private String timeStamp;
     private String sticker;
 
-
-    public ChatActivity(){}
-
     public ChatActivity(String sender, String receiver, String timeStamp, String sticker)
     {
         this.sender = sender;
