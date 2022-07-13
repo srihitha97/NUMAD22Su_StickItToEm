@@ -22,11 +22,6 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()){
 
-            case R.id.register:
-                Intent intent0 = new Intent(this, RegistrationActivity.class);
-                startActivity(intent0);
-                break;
-
             case R.id.login:
                 Intent intent1 = new Intent(this, LoginActivity.class);
                 startActivity(intent1);

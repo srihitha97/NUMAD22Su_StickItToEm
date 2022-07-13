@@ -47,7 +47,14 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "New user created",
                                 Toast.LENGTH_SHORT).show();
                     }
-                    startActivity(new Intent(LoginActivity.this, RegistrationActivity.class));
+                    //startActivity(new Intent(LoginActivity.this, StartActivity.class));
+
+                    Intent login = new Intent(LoginActivity.this,
+                            StartActivity.class);
+
+                    login.putExtra("username", name);
+
+                    startActivity(login);
                 }
 
                 @Override
