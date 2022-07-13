@@ -28,6 +28,7 @@
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".UserActivity"></activity>
         <activity android:name=".UserChatActivity"></activity>
+        <activity android:name=".NotificationsActivity"></activity>
         <activity
             android:name=".StickersActivity">
         </activity>
