@@ -24,8 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrationActivity"></activity>
+        <activity android:name=".LoginHome"></activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity
+            android:name=".Stickers">
+        </activity>
     </application>
 
 </manifest>
