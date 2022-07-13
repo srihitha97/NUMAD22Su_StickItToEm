@@ -30,9 +30,9 @@ public class UserChatActivity extends AppCompatActivity
         Intent intent = getIntent();
         String sender_user = intent.getStringExtra("sender_user");
         String receiver_user = intent.getStringExtra("receiver_user");
-        TextView chatInfo = findViewById(R.id.chatInfoView);
+        TextView chatInfo = findViewById(R.id.chatView);
         chatInfo.append("Chat History with " + receiver_user);
-        RecyclerView recyclerChat = findViewById(R.id.chatRecycleView);
+        RecyclerView recyclerChat = findViewById(R.id.recView);
         RecyclerView.LayoutManager rvlm = new LinearLayoutManager(this);
         recyclerChat.setLayoutManager(rvlm);
         chatHist = new RecyclerChat(sender_user, receiver_user, chatL);
@@ -63,7 +63,7 @@ public class UserChatActivity extends AppCompatActivity
                 }
                 chatL.sort(Comparator.comparing(ChatActivity::getTimeStamp));
 
-                stickerCount = findViewById(R.id.StickerCount);
+                stickerCount = findViewById(R.id.count);
                 stickerCount.setText(MessageFormat.format("Sent {0}" +
                         " Stickers and Received {1} Stickers", sSendCount, sReceiveCount));
             }

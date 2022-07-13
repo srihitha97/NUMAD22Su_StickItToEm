@@ -20,7 +20,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/chatInfoView"
+                android:id="@+id/chatView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -30,7 +30,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/StickerCount"
+                android:id="@+id/count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -38,7 +38,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/chatInfoView" />
+                app:layout_constraintTop_toBottomOf="@+id/chatView" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
@@ -46,11 +46,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
-                app:layout_constraintTop_toBottomOf="@+id/StickerCount"
+                app:layout_constraintTop_toBottomOf="@+id/count"
                 tools:layout_editor_absoluteX="6dp">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/chatRecycleView"
+                    android:id="@+id/recView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="40dp"
@@ -73,7 +73,7 @@
                 app:layout_constraintVertical_bias="0.883">
 
                 <TextView
-                    android:id="@+id/userStickerCountTextView2"
+                    android:id="@+id/viewtwo"
                     android:layout_width="17dp"
                     android:layout_height="11dp"
                     android:text="...."

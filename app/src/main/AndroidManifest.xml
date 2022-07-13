@@ -26,8 +26,10 @@
         </activity>
         <activity android:name=".StartActivity"></activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".UserActivity"></activity>
+        <activity android:name=".UserChatActivity"></activity>
         <activity
-            android:name=".Stickers">
+            android:name=".StickersActivity">
         </activity>
     </application>
 

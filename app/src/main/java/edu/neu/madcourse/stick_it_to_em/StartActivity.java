@@ -81,7 +81,7 @@ public class StartActivity extends AppCompatActivity implements
     @Override
     public void SendStickerClick(int position)
     {
-        Intent intent = new Intent(this, Stickers.class);
+        Intent intent = new Intent(this, StickersActivity.class);
         intent.putExtra("receiver_user", info.get(position).getUser());
         intent.putExtra("sender_user", name);
         startActivity(intent);
