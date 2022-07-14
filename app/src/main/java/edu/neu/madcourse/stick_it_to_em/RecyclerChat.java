@@ -38,8 +38,8 @@ public class RecyclerChat extends
     private void map()
     {
         hp.put("sticker1", R.drawable.sticker1);
-        hp.put("sticker2", R.drawable.sticker2);
-        hp.put("sticker3", R.drawable.sticker3);
+        hp.put("sticker2", R.drawable.s2);
+        hp.put("sticker3", R.drawable.s6);
         hp.put("sticker4", R.drawable.sticker4);
         hp.put("sticker5", R.drawable.sticker5);
         hp.put("sticker6", R.drawable.sticker6);

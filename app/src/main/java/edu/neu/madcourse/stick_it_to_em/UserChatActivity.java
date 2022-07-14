@@ -1,8 +1,11 @@
 package edu.neu.madcourse.stick_it_to_em;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,12 +24,14 @@ public class UserChatActivity extends AppCompatActivity
     private final ArrayList<ChatActivity> chatL = new ArrayList<>();
     private TextView stickerCount;
     private RecyclerChat chatHist;
+    boolean begin = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_recycle_activity);
+        begin = true;
         Intent intent = getIntent();
         String sender_user = intent.getStringExtra("sender_user");
         String receiver_user = intent.getStringExtra("receiver_user");
@@ -74,5 +79,26 @@ public class UserChatActivity extends AppCompatActivity
                 Log.w("Error", error.toException());
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (begin) {
+            new AlertDialog.Builder(this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("Closing Activity")
+                    .setMessage("Are you sure you want to close this activity?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("No", null)
+                    .show();
+        } else {
+            finish();
+        }
     }
 }

@@ -1,5 +1,6 @@
 package edu.neu.madcourse.stick_it_to_em;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +24,7 @@ public class StartActivity extends AppCompatActivity implements
 {
     private RecyclerUser recUsr;
     private String name;
+    private boolean begin = false;
     private final ArrayList<Users> info = new ArrayList<>();
 
 
@@ -30,6 +33,7 @@ public class StartActivity extends AppCompatActivity implements
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_activity);
+        begin = true;
         name = getIntent().getStringExtra("username");
         Users inf = new Users(name);
         TextView text = findViewById(R.id.inf);
@@ -67,6 +71,27 @@ public class StartActivity extends AppCompatActivity implements
                 Log.w( "Error", error.toException());
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (begin) {
+            new AlertDialog.Builder(this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("Closing Activity")
+                    .setMessage("Are you sure you want to close this activity?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("No", null)
+                    .show();
+        } else {
+            finish();
+        }
     }
 
     @Override
