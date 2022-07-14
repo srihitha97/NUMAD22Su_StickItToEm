@@ -23,7 +23,11 @@ public class LoginActivity extends AppCompatActivity {
         login = findViewById(R.id.login);
         login.setOnClickListener(view -> {
             name = ((EditText) findViewById(R.id.username)).getText().toString();
-            login_user();
+            if (name.equals("")) {
+                Toast.makeText(this, "Username can't be empty!", Toast.LENGTH_SHORT).show();
+            } else{
+                login_user();
+            }
         });
     }
 
