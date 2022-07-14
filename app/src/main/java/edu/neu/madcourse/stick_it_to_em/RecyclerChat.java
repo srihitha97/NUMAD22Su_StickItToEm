@@ -24,7 +24,7 @@ public class RecyclerChat extends
     private final HashMap<String, Integer> hp;
     private final ArrayList<ChatActivity> chat_list;
 
-    public RecyclerChat(String sender_user, String receiver_user,ArrayList<ChatActivity> chat_list)
+    public RecyclerChat(ArrayList<ChatActivity> chat_list, String sender_user, String receiver_user)
     {
 
         this.sender_user = sender_user;

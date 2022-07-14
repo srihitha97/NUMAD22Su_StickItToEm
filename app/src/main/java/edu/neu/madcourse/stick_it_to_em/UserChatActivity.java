@@ -40,7 +40,7 @@ public class UserChatActivity extends AppCompatActivity
         RecyclerView recyclerChat = findViewById(R.id.recView);
         RecyclerView.LayoutManager rvlm = new LinearLayoutManager(this);
         recyclerChat.setLayoutManager(rvlm);
-        chatHist = new RecyclerChat(sender_user, receiver_user, chatL);
+        chatHist = new RecyclerChat(chatL, sender_user, receiver_user);
         recyclerChat.setAdapter(chatHist);
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
         DatabaseReference cbd = db.child("chat");
@@ -79,6 +79,7 @@ public class UserChatActivity extends AppCompatActivity
                 Log.w("Error", error.toException());
             }
         });
+
     }
 
     @Override
