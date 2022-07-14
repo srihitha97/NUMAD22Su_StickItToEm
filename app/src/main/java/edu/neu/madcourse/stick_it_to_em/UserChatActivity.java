@@ -1,4 +1,5 @@
 package edu.neu.madcourse.stick_it_to_em;
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,6 +47,7 @@ public class UserChatActivity extends AppCompatActivity
         DatabaseReference cbd = db.child("chat");
         cbd.addValueEventListener(new ValueEventListener()
         {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot)
             {
@@ -67,6 +69,7 @@ public class UserChatActivity extends AppCompatActivity
                     }
                 }
                 chatL.sort(Comparator.comparing(ChatActivity::getTimeStamp));
+                chatHist.notifyDataSetChanged();
 
                 stickerCount = findViewById(R.id.count);
                 stickerCount.setText(MessageFormat.format("Sent {0}" +
